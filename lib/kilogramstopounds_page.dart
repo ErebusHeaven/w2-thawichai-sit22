@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 class KiloGramsToPoundsPage extends StatefulWidget {
   const KiloGramsToPoundsPage({super.key});
@@ -110,6 +111,12 @@ class _KiloGramsToPoundsPageState extends State<KiloGramsToPoundsPage> {
                   hintText: "Enter kilograms",
                   suffixIcon: const Icon(Icons.scale),
                 ),
+                keyboardType: const TextInputType.numberWithOptions(decimal: true),
+                inputFormatters: [
+                  FilteringTextInputFormatter.allow(
+                    RegExp(r'^\d*\.?\d*$'),
+                  ),
+                ],
                 keyboardType: TextInputType.number,
               ),
             ),
