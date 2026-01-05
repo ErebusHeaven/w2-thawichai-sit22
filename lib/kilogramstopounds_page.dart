@@ -92,7 +92,7 @@ class _KiloGramsToPoundsPageState extends State<KiloGramsToPoundsPage> {
             const SizedBox(height: 30),
 
             Text(
-              "Kilograms: $kilograms\nPounds: ${pounds.toStringAsFixed(2)}",
+              "Kilograms: $kilograms\nPounds : ${pounds.toStringAsFixed(2)}",
               textAlign: TextAlign.center,
               style: const TextStyle(
                 fontSize: 22,
